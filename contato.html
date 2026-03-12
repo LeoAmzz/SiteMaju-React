@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | MAJU Assessoria</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header from Components -->
+    <maju-header></maju-header>
+
+    <main>
+        <!-- Contact Hero -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Vamos conversar?</h1>
+                <p>Dúvidas ou observações? Agende uma conversa conosco!</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container contact-container">
+                <!-- Contact Info Card -->
+                <div class="contact-info-card">
+                    <h2>Informações de Contato</h2>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+55 (11) 2611 0527 | +55 (11) 2611 0528</span>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@majuassessoria.com.br</span>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span>Rua Urussuí, 71 Cj. 43</span><br>
+                            <span>São Paulo, 04542050</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="#" class="linkedin-btn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                    <div class="contact-decoration">
+                        <img src="Imagens/Logo Maju Contato.png" alt="Decoração" class="contact-deco-img">
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome..." required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Número de telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número de telefone...">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn-contact-submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer from Components -->
+    <maju-footer></maju-footer>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
