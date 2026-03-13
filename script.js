@@ -127,6 +127,58 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoplay();
     }
 
+    // --- Brands Carousel (Infinite Loop - CSS Marquee base) ---
+    const brandsSlider = document.querySelector('.brands-slider');
+    const brandsTrack = document.querySelector('.brands-track');
+    const brandPrevBtn = document.querySelector('.brands-prev');
+    const brandNextBtn = document.querySelector('.brands-next');
+
+    if (brandsSlider && brandsTrack) {
+        // Para a animação do CSS funcionar perfeitamente em loop suave
+        // clonamos os itens originais e os jogamos na frente (duplicamos)
+        const items = Array.from(brandsTrack.children);
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            clone.setAttribute('aria-hidden', true); // para acessibilidade
+            brandsTrack.appendChild(clone);
+        });
+
+        // Setas no desktop
+        if (brandPrevBtn && brandNextBtn) {
+            
+            // "Hack" simples para setas num ambiente marquee JS/CSS puro: 
+            // A animação já está rodando sozinha. Podemos apenas
+            // temporariamente dar um grande salto de translateX ao clicar para dar a sensação
+            
+            const itemWidth = items[0].offsetWidth;
+            const gap = 50; 
+            const step = itemWidth + gap;
+
+            brandNextBtn.addEventListener('click', () => {
+                 // Pausamos a animação original e movemos manual
+                 brandsTrack.style.animation = 'none';
+                 const currentTransform = getComputedStyle(brandsTrack).transform;
+                 
+                 // Simula avance no scroll movendo 1 elemento
+                 const firstChild = brandsTrack.firstElementChild;
+                 brandsTrack.appendChild(firstChild);
+                 
+                 // Restart a animação do zero
+                 brandsTrack.style.animation = 'scroll-brands 20s linear infinite';
+            });
+            
+            brandPrevBtn.addEventListener('click', () => {
+                 brandsTrack.style.animation = 'none';
+                 
+                 // Simula recuo no scroll movendo ultimo elemento pro incio
+                 const lastChild = brandsTrack.lastElementChild;
+                 brandsTrack.prepend(lastChild);
+                 
+                 brandsTrack.style.animation = 'scroll-brands 20s linear infinite';
+            });
+        }
+    }
+
 });
 
 // --- Blog Functionality ---
