@@ -1,6 +1,40 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Denuncias = () => {
+    const form = useRef();
+    const [status, setStatus] = useState('');
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form.current);
+        if (!formData.get('assunto') || !formData.get('mensagem')) {
+            setStatus('error');
+            setTimeout(() => setStatus(''), 5000);
+            return;
+        }
+
+        setStatus('loading');
+
+        emailjs
+            .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID_DENUNCIA', form.current, {
+                publicKey: 'YOUR_PUBLIC_KEY',
+            })
+            .then(
+                () => {
+                    setStatus('success');
+                    form.current.reset();
+                    setTimeout(() => setStatus(''), 5000);
+                },
+                (error) => {
+                    console.error('FAILED...', error.text);
+                    setStatus('error');
+                    setTimeout(() => setStatus(''), 5000);
+                },
+            );
+    };
+
     return (
         <main>
             <section className="contact-hero" style={{ backgroundColor: 'var(--dark-blue)', color: 'var(--white)', paddingBottom: '60px' }}>
@@ -24,7 +58,7 @@ const Denuncias = () => {
                         </div>
 
                         <div className="contact-form-wrapper" style={{ padding: '40px' }}>
-                            <form className="contact-form" action="#" method="POST">
+                            <form className="contact-form" ref={form} onSubmit={sendEmail}>
                                 
                                 <div className="form-group full-width">
                                     <label htmlFor="assunto">Assunto da Denúncia</label>
@@ -37,7 +71,11 @@ const Denuncias = () => {
                                 </div>
                                 
                                 <div className="form-submit" style={{ textAlign: 'center', marginTop: '30px' }}>
-                                    <button type="submit" className="btn btn-dark" style={{ padding: '15px 40px', width: '100%' }}>Enviar Denúncia Anônima</button>
+                                    <button type="submit" className="btn btn-dark" style={{ padding: '15px 40px', width: '100%' }} disabled={status === 'loading'}>
+                                        {status === 'loading' ? 'Enviando...' : 'Enviar Denúncia Anônima'}
+                                    </button>
+                                    {status === 'success' && <p style={{ color: 'green', marginTop: '15px', fontWeight: 'bold' }}>Denúncia enviada com sucesso de forma segura e anônima!</p>}
+                                    {status === 'error' && <p style={{ color: 'red', marginTop: '15px' }}>Erro ao enviar. Tente novamente.</p>}
                                 </div>
                             </form>
                         </div>

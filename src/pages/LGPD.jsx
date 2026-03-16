@@ -1,6 +1,40 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const LGPD = () => {
+    const form = useRef();
+    const [status, setStatus] = useState('');
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form.current);
+        if (!formData.get('empresa') || !formData.get('nome') || !formData.get('email') || !formData.get('mensagem')) {
+            setStatus('error');
+            setTimeout(() => setStatus(''), 5000);
+            return;
+        }
+
+        setStatus('loading');
+
+        emailjs
+            .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID_LGPD', form.current, {
+                publicKey: 'YOUR_PUBLIC_KEY',
+            })
+            .then(
+                () => {
+                    setStatus('success');
+                    form.current.reset();
+                    setTimeout(() => setStatus(''), 5000);
+                },
+                (error) => {
+                    console.error('FAILED...', error.text);
+                    setStatus('error');
+                    setTimeout(() => setStatus(''), 5000);
+                },
+            );
+    };
+
     return (
         <main>
             <section className="contact-hero">
@@ -27,7 +61,7 @@ const LGPD = () => {
                     </div>
 
                     <div className="contact-form-wrapper" style={{ padding: '40px', width: '100%' }}>
-                        <form className="contact-form" action="#" method="POST">
+                        <form className="contact-form" ref={form} onSubmit={sendEmail}>
                             <div className="form-row">
                                 <div className="form-group">
                                     <label htmlFor="empresa">Empresa</label>
@@ -56,7 +90,11 @@ const LGPD = () => {
                             </div>
                             
                             <div className="form-submit" style={{ textAlign: 'center' }}>
-                                <button type="submit" className="btn btn-primary" style={{ padding: '15px 50px' }}>Enviar Solicitação</button>
+                                <button type="submit" className="btn btn-primary" style={{ padding: '15px 50px' }} disabled={status === 'loading'}>
+                                    {status === 'loading' ? 'Enviando...' : 'Enviar Solicitação'}
+                                </button>
+                                {status === 'success' && <p style={{ color: 'green', marginTop: '10px' }}>Solicitação enviada com sucesso!</p>}
+                                {status === 'error' && <p style={{ color: 'red', marginTop: '10px' }}>Erro ao enviar. Tente novamente.</p>}
                             </div>
                         </form>
                     </div>
