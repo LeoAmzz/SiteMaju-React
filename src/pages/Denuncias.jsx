@@ -1,11 +1,10 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 
 const Denuncias = () => {
     const form = useRef();
     const [status, setStatus] = useState('');
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
         
         const formData = new FormData(form.current);
@@ -17,22 +16,26 @@ const Denuncias = () => {
 
         setStatus('loading');
 
-        emailjs
-            .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID_DENUNCIA', form.current, {
-                publicKey: 'YOUR_PUBLIC_KEY',
-            })
-            .then(
-                () => {
-                    setStatus('success');
-                    form.current.reset();
-                    setTimeout(() => setStatus(''), 5000);
-                },
-                (error) => {
-                    console.error('FAILED...', error.text);
-                    setStatus('error');
-                    setTimeout(() => setStatus(''), 5000);
-                },
-            );
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                form.current.reset();
+                setTimeout(() => setStatus(''), 5000);
+            } else {
+                console.error('FAILED...', response.statusText);
+                setStatus('error');
+                setTimeout(() => setStatus(''), 5000);
+            }
+        } catch (error) {
+            console.error('FAILED...', error);
+            setStatus('error');
+            setTimeout(() => setStatus(''), 5000);
+        }
     };
 
     return (
@@ -59,6 +62,8 @@ const Denuncias = () => {
 
                         <div className="contact-form-wrapper" style={{ padding: '40px' }}>
                             <form className="contact-form" ref={form} onSubmit={sendEmail}>
+                                <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_KEY} />
+                                <input type="hidden" name="subject" value="[DENÚNCIA ANÔNIMA] - MAJU" />
                                 
                                 <div className="form-group full-width">
                                     <label htmlFor="assunto">Assunto da Denúncia</label>
