@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Denúncias | MAJU Assessoria</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header from Components -->
+    <maju-header></maju-header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="contact-hero" style="background-color: var(--dark-blue); color: var(--white); padding-bottom: 60px;">
+            <div class="container">
+                <h1 style="color: var(--white); font-family: var(--font-serif);">Canal de Denúncias</h1>
+                <p style="color: #ccc; max-width: 600px; margin: 0 auto;">Espaço seguro, sigiloso e anônimo para reportar condutas que transgridam nossos princípios éticos ou a legislação vigente.</p>
+            </div>
+        </section>
+
+        <!-- Content & Form -->
+        <section class="section-padding" style="background-color: var(--light-beige); position: relative;">
+            <div class="container contact-container" style="max-width: 800px; flex-direction: column; background: transparent; box-shadow: none;">
+                
+                <div style="background-color: var(--white); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+                    
+                    <div style="padding: 40px; border-bottom: 1px solid #eee; text-align: center;">
+                        <h2 style="font-family: var(--font-sans); color: var(--primary-brown); margin-bottom: 15px;">Sua identidade está protegida</h2>
+                        <p style="color: var(--gray-text); line-height: 1.6;">
+                            A MAJU Assessoria preza pela transparência e integridade. Este canal é estritamente anônimo. 
+                            Utilize este formulário de forma responsável para reportar quaisquer irregularidades percebidas nas operações que envolvam colaboradores, clientes ou fornecedores.
+                        </p>
+                    </div>
+
+                    <div class="contact-form-wrapper" style="padding: 40px;">
+                        <form class="contact-form" action="#" method="POST">
+                            
+                            <div class="form-group full-width">
+                                <label for="assunto">Assunto da Denúncia</label>
+                                <input type="text" id="assunto" name="assunto" placeholder="Ex: Quebra de compliance, assédio, fraude..." required style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; border: 1px solid #e0e0e0;">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="mensagem">Detalhes da Ocorrência</label>
+                                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Por favor, forneça o máximo possível de detalhes: o que aconteceu, quando, onde e quem esteve envolvido. Não é necessário se identificar." required style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; border: 1px solid #e0e0e0;"></textarea>
+                            </div>
+                            
+                            <div class="form-submit" style="text-align: center; margin-top: 30px;">
+                                <button type="submit" class="btn btn-dark" style="padding: 15px 40px; width: 100%;">Enviar Denúncia Anônima</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer from Components -->
+    <maju-footer></maju-footer>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
