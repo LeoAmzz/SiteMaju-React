@@ -63,6 +63,11 @@ const Denuncias = () => {
                         <div className="contact-form-wrapper" style={{ padding: '40px' }}>
                             <form className="contact-form" ref={form} onSubmit={sendEmail}>
                                 <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_KEY} />
+                                
+                                {/* Início: Honeypot Anti-Bot Web3Forms */}
+                                <input type="text" name="botcheck" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+                                {/* Fim: Honeypot */}
+
                                 <input type="hidden" name="subject" value="[DENÚNCIA ANÔNIMA] - MAJU" />
                                 
                                 <div className="form-group full-width">

@@ -82,6 +82,11 @@ const Contato = () => {
                     <div className="contact-form-wrapper">
                         <form className="contact-form" ref={form} onSubmit={sendEmail}>
                             <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_KEY} />
+                            
+                            {/* Início: Honeypot Anti-Bot Web3Forms */}
+                            <input type="text" name="botcheck" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+                            {/* Fim: Honeypot */}
+
                             <input type="hidden" name="subject" value="Novo Contato do Site - MAJU" />
                             <div className="form-row">
                                 <div className="form-group">
