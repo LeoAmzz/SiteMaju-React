@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-col footer-brand">
                         <Link to="/" className="footer-logo">
-                            <img src="/Imagens/LogoMajuBranca1.png" alt="MAJU Logo White" />
+                            <img src="/Imagens/LogoMajuBranca1.webp" alt="MAJU Logo White" />
                         </Link>
                         <p className="footer-desc">A bússola que indicará o caminho certo para a gestão de seus depósitos judiciais. Transformamos ativos em resultados com excelência.</p>
                         <div className="social-links">

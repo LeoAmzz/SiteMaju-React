@@ -37,10 +37,9 @@ const Home = () => {
 
     // --- Brands Logic ---
     const brands = [
-        { src: "/Imagens/logos/Banco Votorantim logo.png", alt: "Banco Votorantim" },
-        { src: "/Imagens/logos/Banco Rural logo.png", alt: "Banco Rural" },
-        { src: "/Imagens/logos/Banco Pine logo.png", alt: "Banco Pine" },
-        { src: "/Imagens/logos/Itau logo.png", alt: "Itaú" },
+        { src: "/Imagens/logos/banco votorantim logo.png", alt: "Banco Votorantim" },
+        { src: "/Imagens/logos/banco rural logo.png", alt: "Banco Rural" },
+        { src: "/Imagens/logos/banco pine logo.png", alt: "Banco Pine" },
         { src: "/Imagens/logos/eliane.png", alt: "Banco Industrial do Brasil" },
         { src: "/Imagens/logos/fedex.png", alt: "fedex" },
         { src: "/Imagens/logos/coca-cola.png", alt: "coca-cola" }
@@ -88,7 +87,7 @@ const Home = () => {
                     </div>
                     <div className="hero-curr-page">
                         <img src="/Imagens/Circulo amarelo.png" alt="" className="circle-bg-img" />
-                        <img src="/Imagens/portrait-female-lawyer-formal-suit-with-clipboard (3)-Photoroom 1.png" alt="Executiva MAJU" className="hero-img" />
+                        <img src="/Imagens/portrait-female-lawyer-formal-suit-with-clipboard (3)-Photoroom 1.webp" alt="Executiva MAJU" className="hero-img" />
                     </div>
                 </div>
             </section>
@@ -162,7 +161,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="section-padding history" style={{ backgroundImage: "url('/Imagens/Banner Gustavo.png')" }}>
+            <section className="section-padding history" style={{ backgroundImage: "url('/Imagens/Banner Gustavo.webp')" }}>
                 <div className="container history-container">
                     <div className="history-content">
                         <div className="history-bar"></div>
@@ -262,7 +261,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="cta" style={{ backgroundImage: "url('/Imagens/Default_bookshelf_with_books_in_a_highly_realistic_law_office_3.png')" }}>
+            <section className="cta" style={{ backgroundImage: "url('/Imagens/Default_bookshelf_with_books_in_a_highly_realistic_law_office_3.webp')" }}>
                 <div className="container cta-content">
                     <h2>Como podemos te ajudar?</h2>
                     <Link to="/contato" className="btn btn-white">Fale Conosco</Link>
