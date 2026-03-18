@@ -86,7 +86,13 @@ const Home = () => {
                         <Link to="/contato" className="btn btn-primary">Fale com nossos especialistas</Link>
                     </div>
                     <div className="hero-curr-page">
-                        <img src="/Imagens/Circulo amarelo.png" alt="" className="circle-bg-img" />
+                        <img 
+                            className="circle-bg-img" 
+                            src="/Imagens/Circulo amarelo.png"
+                            fetchPriority="high"
+                            loading="eager"
+                            alt="Círculo decorativo MAJU"
+                        />
                         <img src="/Imagens/portrait-female-lawyer-formal-suit-with-clipboard (3)-Photoroom 1.webp" alt="Executiva MAJU" className="hero-img" />
                     </div>
                 </div>
