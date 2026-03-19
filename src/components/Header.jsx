@@ -29,7 +29,7 @@ const Header = () => {
                         <li><Link to="/quem-somos" className={isActive('/quem-somos')}>Quem Somos</Link></li>
                         <li><Link to="/solucoes" className={isActive('/solucoes')}>Soluções</Link></li>
                         <li><Link to="/contato" className={isActive('/contato')}>Contato</Link></li>
-                        <li><Link to="/blog" className={isActive('/blog')}>MAJU Journal</Link></li>
+                        <li><Link to="/blog" className={isActive('/blog')}>MAJU News</Link></li>
                         <li><a href="https://sistemacora.com.br/login">Sistema CORA</a></li>
                     </ul>
                 </nav>

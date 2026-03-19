@@ -32,7 +32,7 @@ const Blog = () => {
       <section className="blog-hero">
         <div className="container">
           <span className="eyebrow">Insights & Notícias</span>
-          <h1>MAJU Journal</h1>
+          <h1>MAJU News</h1>
           <p>
             Fique por dentro das principais novidades institucionais, eventos
             exclusivos e atualizações oficiais sobre a trajetória da MAJU.

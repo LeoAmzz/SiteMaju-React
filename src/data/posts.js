@@ -44,7 +44,7 @@ export const posts = [
         <p>🚀 25 anos de experiência, olhando para o futuro com inovação, tecnologia e foco em resultado.</p>
     `,
   },
-    {
+  {
     id: 3,
     slug: "marco-lilas-marco-amarelo-saude-da-mulher",
     category: "Responsabilidade Social",
@@ -61,6 +61,27 @@ export const posts = [
         <p>💛 Março Amarelo: O alerta global para a Endometriose, uma condição que afeta milhões de mulheres e cujos sintomas, muitas vezes, são silenciados ou normalizados. O diagnóstico correto devolve a qualidade de vida. </p>
         <p>Nosso compromisso com a Integridade e o Respeito vai muito além das nossas análises de processos; ele se reflete no cuidado com o bem-estar de quem constrói a nossa história. </p>
         <p>Apoiamos essa causa e incentivamos todas as mulheres do nosso time, parceiras e clientes a reservarem um tempo para si mesmas. Cuidar da sua saúde é o seu investimento mais importante! ✨</p>
+    `,
+  },
+  {
+    id: 4,
+    slug: "maju-completa-25-anos",
+    category: "Novidades MAJU",
+    title: "MAJU Completa 25 Anos: Uma História de Excelência e Inovação",
+    excerpt:
+      "Hoje, 19 de março de 2026, a MAJU Assessoria e Consultoria Empresarial completa oficialmente 25 anos de história...",
+    date: "19 Mar, 2026",
+    author: "Equipe MAJU",
+    imageUrl: "/Imagens/Maju25Anos2.jpg",
+    content: `
+        <p>Hoje, 19 de março de 2026, a MAJU Assessoria e Consultoria Empresarial completa oficialmente 25 anos de história.
+Uma jornada que começou em 2001, sob a visão do nosso fundador Luiz Gustavo Vasconcellos, e que evoluiu para nos tornar a principal bússola estratégica do mercado na recuperação e conciliação de depósitos judiciais.
+Nossa missão sempre foi muito clara: recuperar o domínio e controle dos valores para aqueles a quem de direito, com o objetivo de impulsionar a economia do nosso país e gerar riquezas.
+Ao longo desses 25 anos, unimos o mais alto rigor técnico à inovação tecnológica. Com o nosso Sistema CORA, combinamos inteligência de dados e algoritmos próprios para entregar segurança e alta performance. Os números dessa trajetória falam por si: já analisamos mais de milhares de CNPJs, rastreamos mais de 6 bilhões em saldos e conquistamos a confiança de mais de 500 clientes, incluindo os maiores players e instituições financeiras do país.
+Mas a nossa maior inovação sempre foi — e continuará sendo — o nosso capital humano.
+A dedicação da nossa equipe de especialistas, que preza pela integridade, transparência e por um relacionamento comercial sólido, é o que faz a mágica acontecer todos os dias.
+Aos nossos clientes, parceiros e a cada colaborador que veste ou já vestiu a nossa camisa: nosso muito obrigado!
+O passado de valores esquecidos nós recuperamos. O futuro, nós continuaremos a construir juntos, com excelência e inovação. Que venham os próximos 25 anos! 🥂⚖️</p>
     `,
   },
 ];
