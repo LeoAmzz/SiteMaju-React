@@ -57,7 +57,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Luiz Gustavo</div>
                                 <span className="team-role">CEO</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Ana Carolina</div>
                                 <span className="team-role">COO</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Julia</div>
                                 <span className="team-role">Head Jurídico</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Mariana</div>
                                 <span className="team-role">Head Financeiro</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Silvio Helene</div>
                                 <span className="team-role">Coordenador Jurídico</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Stephanne</div>
                                 <span className="team-role">Head Operacional</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -123,7 +123,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Marina Barros</div>
                                 <span className="team-role">Head Conciliação</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -134,7 +134,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">Roseli Silvia</div>
                                 <span className="team-role">Administrativo</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -145,7 +145,7 @@ const QuemSomos = () => {
                             <div className="team-overlay">
                                 <div className="team-name">João Ribeiro</div>
                                 <span className="team-role">Head de TI</span>
-                                <span className="team-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                <span className="team-bio"></span>
                                 <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
