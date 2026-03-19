@@ -58,13 +58,13 @@ const QuemSomos = () => {
                                 <div className="team-name">Luiz Gustavo</div>
                                 <span className="team-role">CEO</span>
                                 <span className="team-bio"></span>
-                                <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/luiz-gustavo-alvim-de-vasconcellos-409750237/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3Br7IHE9%2FqQ9a7oqbl5IxNzA%3D%3D" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
                         <div className="team-card">
                             <img src="/Imagens/Retrato/Carol.png" alt="Ana Carolina" />
-                            <a href="#" className="icon-link"><i className="fas fa-external-link-alt"></i></a>
+                            <a href="https://www.linkedin.com/in/carol-oliveira-32bb0925/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3Br7IHE9%2FqQ9a7oqbl5IxNzA%3D%3D" className="icon-link"><i className="fas fa-external-link-alt"></i></a>
                             <div className="team-overlay">
                                 <div className="team-name">Ana Carolina</div>
                                 <span className="team-role">COO</span>
@@ -91,7 +91,7 @@ const QuemSomos = () => {
                                 <div className="team-name">Mariana</div>
                                 <span className="team-role">Head Financeiro</span>
                                 <span className="team-bio"></span>
-                                <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/mariana-vasconcellos-ab397166/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3Bdg4VyPvPRa%2BqCEwp2U3F%2Fw%3D%3D" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -113,7 +113,7 @@ const QuemSomos = () => {
                                 <div className="team-name">Stephanne</div>
                                 <span className="team-role">Head Operacional</span>
                                 <span className="team-bio"></span>
-                                <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/st%C3%A9phanne-gasparin-patriota-5331bba0/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3BSsPY%2BT1wQXiS5e8HNHFkcA%3D%3D" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@ const QuemSomos = () => {
                                 <div className="team-name">Marina Barros</div>
                                 <span className="team-role">Head Conciliação</span>
                                 <span className="team-bio"></span>
-                                <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/marinaabarros/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3Bdg4VyPvPRa%2BqCEwp2U3F%2Fw%3D%3D" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -135,7 +135,7 @@ const QuemSomos = () => {
                                 <div className="team-name">Roseli Silvia</div>
                                 <span className="team-role">Administrativo</span>
                                 <span className="team-bio"></span>
-                                <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/roseli-silvia-camargo-ferreira-7759b017/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3Bdg4VyPvPRa%2BqCEwp2U3F%2Fw%3D%3D" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -146,7 +146,7 @@ const QuemSomos = () => {
                                 <div className="team-name">João Ribeiro</div>
                                 <span className="team-role">Head de TI</span>
                                 <span className="team-bio"></span>
-                                <a href="#" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/jo%C3%A3o-ribeiro-64b22193/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3Bdg4VyPvPRa%2BqCEwp2U3F%2Fw%3D%3D" className="linkedin-icon"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
