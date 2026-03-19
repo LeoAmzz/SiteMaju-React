@@ -5,7 +5,7 @@ const Home = () => {
     // --- Testimonials State & Logic ---
     const testimonials = [
         {
-            quote: "A equipe da MAJU Assessoria demonstra profundo domínio no rastreamento e recuperação de valores residuais em ações trabalhistas e cíveis arquivadas. Com um trabalho altamente organizado, ágil e especializado, a MAJU tem contribuído de forma decisiva para a eficiência dos nossos processos internos... Estamos extremamente satisfeitos com os resultados obtidos e reconhecemos o valor estratégico que a MAJU Assessoria agrega ao nosso negócio desde 04/2023.",
+            quote: "A equipe da MAJU Assessoria demonstra profundo domínio no rastreamento e recuperação de valores residuais em ações trabalhistas e cíveis arquivadas. Com um trabalho altamente organizado, ágil e especializado, a MAJU tem contribuído de forma decisiva para a eficiência dos nossos processos internos, permitindo que nosso departamento mantenha o foco nas atividades essenciais enquanto eles conduzem, com excelência, toda a análise histórica em busca de oportunidades de monetização. Estamos extremamente satisfeitos com os resultados obtidos e reconhecemos o valor estratégico que a MAJU Assessoria agrega ao nosso negócio desde 04/2023.",
             name: "Carla Lavorato Alves",
             role: "Departamento Financeiro, Grupo Casas Bahia"
         },
@@ -15,10 +15,15 @@ const Home = () => {
             role: "Departamento Jurídico, Banco Rural S/A"
         },
         {
-            quote: "Desde dezembro de 2022, a Citrosuco conta com o suporte da MAJU Assessoria na execução da Conciliação Contábil relacionada a créditos judiciais. A atuação da MAJU tem se mostrado consistente e tecnicamente embasada... Esse trabalho tem contribuído de forma concreta para a redução de riscos, correção de pendências históricas e maior segurança nas auditorias. Além disso, a MAJU tem facilitado a integração entre as áreas Jurídica, Contábil e Financeira.",
+            quote: "Desde dezembro de 2022, a Citrosuco conta com o suporte da MAJU Assessoria na execução da Conciliação Contábil relacionada a créditos judiciais. A atuação da MAJU tem se mostrado consistente e tecnicamente embasada, especialmente pela precisão na identificação da origem dos valores, organização documental e confronto entre dados contábeis e informações oficiais dos tribunais e instituições financeiras. Esse trabalho tem contribuído de forma concreta para a redução de riscos, para a correção de pendências históricas e para maior segurança nas auditorias internas e externas.",
             name: "Juliana Mandu Gandra",
             role: "Legal Ops, Grupo Citrosuco"
-        }
+        },
+        {
+            quote: "A MAJU Assessoria e Consultoria Empresarial tem sido fundamental para o nosso departamento jurídico e financeiro. O trabalho de rastreamento e recuperação de saldos em ações trabalhistas e cíveis arquivadas demonstrou uma celeridade impressionante logo no início. Graças ao empenho da MAJU, obtivemos resultados expressivos e imediatos. Eles realmente transformam a atitude de 'valores procurando processo' em uma realidade de recuperação financeira.",
+            name: "Dr. Marcelo Fortes",
+            role: "Departamento Jurídico - Grupo Pullmantur"
+        },
     ];
 
     const [currentSlide, setCurrentSlide] = useState(0);
