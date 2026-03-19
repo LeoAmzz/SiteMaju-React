@@ -124,7 +124,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section-padding solutions" id="solucoes">
+      <section className="section-solutions solutions" id="solucoes">
         <div className="container solutions-grid">
           <div className="solutions-text">
             <h2>
@@ -225,8 +225,8 @@ const Home = () => {
       </section>
 
       <section
-        className="section-padding history"
-        style={{ backgroundImage: "url('/Imagens/Banner Gustavo.webp')" }}>
+        className="section-history history"
+        style={{ backgroundImage: "url('/Imagens/Component 9.webp')" }}>
         <div className="container history-container">
           <div className="history-content">
             <div className="history-bar"></div>
@@ -247,8 +247,6 @@ const Home = () => {
                 <div className="history-item">
                   <i className="fas fa-check"></i> Confiabilidade
                 </div>
-              </div>
-              <div className="history-col">
                 <div className="history-item">
                   <i className="fas fa-check"></i> Resultados
                 </div>
@@ -264,7 +262,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section-padding numbers">
+      <section className="section-numbers numbers">
         <div className="container">
           <h2>Nossos Números</h2>
           <p className="numbers-subtitle">
@@ -291,7 +289,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section-padding testimonials" id="depoimentos">
+      <section className="section-testimonials testimonials" id="depoimentos">
         <div className="container">
           <div className="testimonials-header">
             <h2>O que dizem nossos clientes</h2>
