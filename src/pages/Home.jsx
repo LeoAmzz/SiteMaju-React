@@ -236,10 +236,7 @@ const Home = () => {
                         <button className="carousel-btn prev-btn" onClick={handlePrev}><i className="fas fa-chevron-left"></i></button>
                         
                         <div className="testimonial-track-container">
-                            <ul 
-                                className="testimonial-track" 
-                                style={{ transform: `translateX(-${currentSlide * 100}%)`, transition: 'transform 0.5s ease' }}
-                            >
+                            <ul className="testimonial-track">
                                 {testimonials.map((t, index) => (
                                     <li key={index} className={`testimonial-slide ${index === currentSlide ? 'current-slide' : ''}`}>
                                         <div className="testimonial-card">
