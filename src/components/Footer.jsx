@@ -12,9 +12,8 @@ const Footer = () => {
                         </Link>
                         <p className="footer-desc">A bússola que indicará o caminho certo para a gestão de seus depósitos judiciais. Transformamos ativos em resultados com excelência.</p>
                         <div className="social-links">
-                            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                            <a href="https://web.facebook.com/profile.php?id=100057122813947" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/maju-assessoria-e-consultoria-empresarial-ltda/posts/" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     
