@@ -26,7 +26,7 @@ const Footer = () => {
                             </div>
                             <div className="info-row">
                                 <div className="info-icon"><i className="fas fa-phone-alt"></i></div>
-                                <div><a href="tel:+551126110527">+55(11) 2611 0527</a> | <a href="tel:+551126110527">+55(11) 2611 0527</a></div>
+                                <div><a href="tel:+551126110527">+55(11) 2611 0527</a> | <a href="tel:+551126110527">+55(11) 2611 0528</a></div>
                             </div>
                             <div className="info-row">
                                 <div className="info-icon"><i className="fas fa-envelope"></i></div>

@@ -115,6 +115,7 @@ img {
 .btn-primary {
   background-color: var(--primary-gold);
   color: var(--black-text);
+  margin-bottom: 50px;
 }
 
 .btn-primary:hover {
@@ -201,8 +202,8 @@ nav a.active {
 
 /* --- Hero Section --- */
 .hero {
-  margin-top: 90px;
-  height: calc(100vh - 90px);
+  padding-top: calc(90px + 2rem);
+  min-height: 600px;
   position: relative;
   background-color: var(--white);
   overflow: hidden;
@@ -265,7 +266,6 @@ nav a.active {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
-  margin-top: 15px;
 }
 
 .hero-text p {
@@ -294,8 +294,8 @@ nav a.active {
   top: 50%;
   right: 0; /* Anchored right, but moved inward via transform or width */
   transform: translate(15%, -50%); /* Shift slightly right to cut off */
-  width: 85vh; /* Responsive to height */
-  height: 85vh;
+  width: 700px; /* Fixed height requested */
+  height: 700px;
   max-width: none;
   object-fit: contain;
   z-index: 1;
@@ -306,7 +306,7 @@ nav a.active {
   bottom: -5vh; /* Hide cut-off knees */
   left: 50%; /* Center in the RIGHT HALF of screen */
   transform: translateX(-50%);
-  height: 90vh; /* Fill height */
+  height: 700px; /* Fixed height requested */
   width: auto;
   z-index: 2;
   object-fit: contain;
@@ -315,57 +315,60 @@ nav a.active {
 /* Responsive for smaller screens */
 @media (max-width: 992px) {
   .hero {
+    padding-top: calc(90px + 2rem);
+    min-height: auto;
     height: auto;
-    min-height: 100vh;
-    padding: 40px 0 0 0;
+    overflow-x: hidden;
   }
-
   .hero .container {
     flex-direction: column;
   }
-
+  .hero-row {
+    flex-direction: column;
+    text-align: center;
+  }
   .hero-text {
     width: 100%;
-    text-align: center;
-    margin-bottom: 50px; /* Space before image area */
+    margin-bottom: 50px;
   }
-
   .hero-text p {
     margin-left: auto;
     margin-right: auto;
   }
-
   .hero-curr-page {
-    position: relative; /* Change from absolute to relative for document flow */
+    position: relative;
     width: 100%;
-    height: 400px; /* Set a fixed height for image area on mobile */
-    bottom: auto;
-    top: auto;
+    height: 400px;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Align to bottom of this container */
-    overflow: hidden; /* Hide overflow at the bottom */
-    margin-top: -80px;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-top: 0;
   }
-
   .circle-bg-img {
-    width: 300px;
-    height: 300px;
-    right: auto;
+    position: absolute;
+    width: 320px;
+    height: 320px;
     left: 50%;
-    transform: translate(
-      -50%,
-      -50%
-    ); /* Center horizontally and vertically within relative container */
-    top: 60%;
+    top: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
   }
-
   .hero-img {
-    height: 350px; /* Resize appropriately for mobile */
-    bottom: -20px; /* Bring down to hide cut */
-    right: auto;
+    position: absolute;
+    height: 370px;
+    width: auto;
+    bottom: -20px;
     left: 50%;
+    right: auto;
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-curr-page {
+    width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -1110,38 +1113,9 @@ footer {
     display: block;
   }
 
-  .hero-row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    flex: 1;
-  }
-
-  .hero-text p {
-    max-width: 100%;
-  }
-
-  .circle-bg-img {
-    width: 380px;
-    right: -30px;
-  }
-
-  .hero-curr-page {
-    flex: 1;
-    justify-content: center;
-    min-height: 400px;
-  }
-
-  .hero-img {
-    margin-right: 0;
-    margin-bottom: 0;
-    max-height: 450px;
-  }
-
   .solutions-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .cards-grid {
@@ -1199,6 +1173,11 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .cards-grid {
     grid-template-columns: 1fr;
   }
@@ -1528,7 +1507,7 @@ footer {
 
 /* Left Column - Yellow Info */
 .contact-info-card {
-  flex: 0 0 35%; /* Fixed percentage */
+  flex: 0 0 45%; /* Fixed percentage */
   background-color: #ffd85c; /* Vibrant Yellow */
   padding: 50px 40px;
   position: relative;
@@ -1618,6 +1597,19 @@ footer {
   display: flex;
   gap: 30px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
 }
 
 .form-group {

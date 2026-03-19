@@ -226,7 +226,7 @@ const Home = () => {
 
       <section
         className="section-history history"
-        style={{ backgroundImage: "url('/Imagens/Component 9.webp')" }}>
+        style={{ backgroundImage: "url('/Imagens/Component 11.png')" }}>
         <div className="container history-container">
           <div className="history-content">
             <div className="history-bar"></div>
