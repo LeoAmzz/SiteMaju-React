@@ -74,6 +74,10 @@ img {
   margin: 0 auto;
   padding: 0 20px;
 }
+.section-padding {
+  padding: 50px 0;
+}
+
 
 .section-solutions {
   padding: 50px 0;
