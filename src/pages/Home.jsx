@@ -1,6 +1,52 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
+const AnimatedNumber = ({ target, prefix = "", suffix = "", duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const nodeRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    let startTimestamp = null;
+    let animationFrame = null;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            setCount(Math.floor(easeProgress * target));
+            
+            if (progress < 1) {
+              animationFrame = window.requestAnimationFrame(step);
+            }
+          };
+          animationFrame = window.requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (nodeRef.current) {
+      observer.observe(nodeRef.current);
+    }
+
+    return () => {
+      if (nodeRef.current) observer.unobserve(nodeRef.current);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
+  }, [target, duration]);
+
+  return (
+    <span ref={nodeRef}>
+      {prefix}{count}{suffix}
+    </span>
+  );
+};
+
 const Home = () => {
   // --- Testimonials State & Logic ---
   const testimonials = [
@@ -116,7 +162,7 @@ const Home = () => {
               alt="Círculo decorativo MAJU"
             />
             <img
-              src="/Imagens/portrait-female-lawyer-formal-suit-with-clipboard (3)-Photoroom 1.webp"
+              src="/Imagens/JuliaCapa3.png"
               alt="Executiva MAJU"
               className="hero-img"
             />
@@ -224,9 +270,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section
-        className="section-history history"
-        style={{ backgroundImage: "url('/Imagens/Component 11.png')" }}>
+      <section className="section-history history">
         <div className="container history-container">
           <div className="history-content">
             <div className="history-bar"></div>
@@ -270,19 +314,19 @@ const Home = () => {
           </p>
           <div className="numbers-grid">
             <div className="number-item">
-              <h3>+500</h3>
+              <h3><AnimatedNumber prefix="+" target={500} /></h3>
               <p>Clientes</p>
             </div>
             <div className="number-item">
-              <h3>+10M</h3>
+              <h3><AnimatedNumber prefix="+" target={10} suffix="M" /></h3>
               <p>CNPJs analisados</p>
             </div>
             <div className="number-item">
-              <h3>+10</h3>
+              <h3><AnimatedNumber prefix="+" target={10} /></h3>
               <p>Anos de experiência</p>
             </div>
             <div className="number-item">
-              <h3>+6B</h3>
+              <h3><AnimatedNumber prefix="+" target={6} suffix="B" /></h3>
               <p>saldos rastreados</p>
             </div>
           </div>

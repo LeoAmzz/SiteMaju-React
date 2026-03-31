@@ -52,7 +52,7 @@ const QuemSomos = () => {
 
                     <div className="team-grid">
                         <div className="team-card">
-                            <img src="/Imagens/Retrato/Gustavo.png" alt="Luiz Gustavo" />
+                            <img src="/Imagens/Retrato/Gustavo3.png" alt="Luiz Gustavo" />
                             <a href="#" className="icon-link"><i className="fas fa-external-link-alt"></i></a>
                             <div className="team-overlay">
                                 <div className="team-name">Luiz Gustavo</div>

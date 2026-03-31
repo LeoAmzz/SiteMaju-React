@@ -78,7 +78,6 @@ img {
   padding: 50px 0;
 }
 
-
 .section-solutions {
   padding: 50px 0;
 }
@@ -92,7 +91,7 @@ img {
 }
 
 .section-history {
-  padding: 60px 0;
+  padding: 0px 0;
 }
 
 /* --- Buttons --- */
@@ -598,8 +597,9 @@ nav a.active {
 /* --- History Section --- */
 .history {
   background-color: var(--dark-blue);
+  background-image: url("/Imagens/MajuBannerHome3.png");
   background-size: cover;
-  background-position: center right;
+  background-position: right center;
   background-repeat: no-repeat;
   color: var(--white);
   position: relative;
@@ -614,10 +614,69 @@ nav a.active {
 }
 
 .history-content {
-  flex: 0 0 55%;
-  padding: 20px 0;
+  flex: 0 1 50%;
+  width: 100%;
+  padding: 40px 0;
   color: var(--white);
-  max-width: 600px;
+  max-width: clamp(320px, 40vw, 480px);
+}
+
+@media (max-width: 1550px) {
+  .history-content {
+    max-width: 400px;
+  }
+}
+@media (max-width: 1400px) {
+  .history {
+    background-image: none !important;
+    padding-bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .history::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 95%;
+    background-image: linear-gradient(to bottom, var(--dark-blue) 0%, transparent 15%), url("/Imagens/MajuBannerHomeMobile1.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+  }
+
+  .history-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .history-content {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .history-bar {
+    margin: 0 auto 25px;
+  }
+
+  .history-list {
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .history-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .history-content > p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }
 
 .history-bar {
@@ -644,7 +703,7 @@ nav a.active {
 
 .history-list {
   display: flex;
-  gap: 60px;
+  gap: 40px;
 }
 
 .history-col {
@@ -1122,28 +1181,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .history-container {
-    flex-direction: column;
-  }
-
-  .history-content {
-    flex: 1;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .history-bar {
-    margin: 0 auto 25px;
-  }
-
-  .history-list {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .history {
-    background-position: center center;
-  }
+  /* Removed history responsive rules from 992px to explicitly handle it at 1400px */
 
   .brands-slider {
     gap: 30px;
@@ -1714,7 +1752,6 @@ footer {
    ===================================================== */
 
 @media (max-width: 1250px) {
-
   .solutions-hero-content {
     flex-direction: column;
     text-align: center;
@@ -1744,8 +1781,34 @@ footer {
 
 @media (max-width: 768px) {
   .history {
-    background-image: none !important;
+    background-size: 100% auto;
+    padding-bottom: clamp(350px, 90vw, 550px); /* Aumenta o espaço proporcional no mobile */
   }
+
+  .history-content {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .history-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .history-content > p {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .history-col {
+    gap: 8px;
+  }
+
+  .history-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .brands-wrapper {
     gap: 0;
   }
